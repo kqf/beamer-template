@@ -1,0 +1,56 @@
+\documentclass[handout]{beamer}
+\setbeamersize{text margin left=1em,text margin right=1em} % Reduce margins
+
+\usefonttheme[onlymath]{serif}
+\usepackage[T1]{fontenc}
+
+\definecolor{xkcd_color}{rgb}{.376,.435,.533}
+\usecolortheme[named=xkcd_color]{structure}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx,float}
+
+\usepackage{epsfig,rotating}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{frametitle}[default][left]
+
+% Delete everything but slide numbers from the footline:
+\setbeamertemplate{footline}{
+\begin{beamercolorbox}[ht=.3cm , dp=.3cm, leftskip=.3cm, rightskip=.3cm plus1fil]{}
+			 \hfill    \small \insertframenumber/\inserttotalframenumber%
+\end{beamercolorbox}%
+}
+
+
+
+\newcommand{\handouton}{1}
+\def\pt{\mbox{$p_{\rm T}$}}
+\newcommand{ \la }{\langle}
+\newcommand{ \ra }{\rangle}
+\newcommand{ \eps }{\varepsilon}
+\newcommand{ \mean }[1]{\la #1 \ra}   
+\newcommand{ \dmean }[1]{\la\la #1 \ra\ra}   
+\newcommand{ \ds }{\displaystyle}
+
+\newcommand{\image}[2]{
+	\begin{figure}[H]
+		\begin{minipage}{1\textwidth}
+			\centering
+			\epsfig{file=#1, width=#2\linewidth}
+		\end{minipage}
+	\end{figure}
+}
+\newcommand{\imagedouble}[4]{
+	\begin{figure}[H]%{\linewidth}
+		\begin{minipage}[h]{0.48\linewidth}
+				\center{\epsfig{file=#1,width=#2\linewidth}}
+		\end{minipage} %
+		\begin{minipage}[h]{0.48\linewidth}
+			\center{\epsfig{file=#3,width=#4\linewidth}}
+		\end{minipage}
+ \end{figure}
+}
+
+\newcommand{\emphs}[1]{\textcolor{xkcd_color}{#1}}
+
+% NB: python -c 'import this' | grep -i sim
