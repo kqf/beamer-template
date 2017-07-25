@@ -1,5 +1,5 @@
 FROM aergus/latex
-USER root
+RUN apt-get install -y curl
 
 ADD . beamer-template/
 WORKDIR /beamer-template/example
