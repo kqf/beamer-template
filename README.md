@@ -1,5 +1,4 @@
-Simple beamer presentation template
-====================================
+# Beamer template [![Build Status](https://travis-ci.com/kqf/beamer-template.svg?branch=master)](https://travis-ci.com/kqf/beamer-template)
 
 A very simple/basic beamer template without annoying grapics and footnotes. 
 Single color theme and some help functions are included.
@@ -15,7 +14,6 @@ Just include this header to your code.
 	% < Your code >
 \end{document}
 ```
-
 Compile it as usual
 
 ```
