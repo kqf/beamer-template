@@ -5,15 +5,17 @@ services:
   - docker
 
 script:
-  - docker build -t example .
-  - docker run --rm example make
+  # - docker build -t example .
+  # - docker run --rm example make
+  - echo "test" > example.pdf
+  - ls
 
 
 deploy:
    provider:
      - releases
    api_key:
-       secure: "sXz3J+8MJMg4LOCm1mvOMbWUjUG0xikaL2pY99JuQKguFkQ7YBNlGwk16tWOCPFvO3+u4yYm+vn85yC3JTfVZyDbtcIe1xGzU2GYcfrCL0iUhMcRGPRXeEKv+Js18hWSRNhx1eh4LuFv+gNjG5V/Pg//QEciNdYINAHUGeJPLB7QXx5Ig3nJTMwZ27up4cPGVuLUAstpl/Lm01ciX0/gYSadN0ebgMHkd7OwaM04/ovcOsdrastS5zq3ti7+YBE9L5/F6LqymyB7SqI/FzAz8w6EpJ6qtFPSO7eO/rAddaxWkBIKqOY319wRhpji1j3aQluONW5pF9O2TJSQhPpwn5EhTwsktLgC8bfPzygWruqH5J0CncJ84jD0BTCoO1OWsDhb3i5xsz2VhpuVP6+JgaNIAXjPKfPj/Hqy1/sQjbRBjgazICtSmpFqZitblM/cxFfzplyPkfwDlqEpvcg4O2+rU6gn+GOECljiBeHj9Qu5j53ugBM/EoJOIPGWJwjFpGG1gp910VS+tJAp5WS0u8cdXQ9lfGdWQUIL6WsLh7SGNg6yOIUXdi40bTSxuNHXiYdDCCBHPv9GJ7W1NpmZqrjZrySpCUfDydcehRCFp5GKy8zgoeUzHAuXPa9fd9OzCCRgG6hwDdj/d5g1Wzoe3tpAJL5/T6GDjEwzoQ3sdbw="
+         secure: "X/jZXgCMdWR6bXac9416YeX7gd3ZYV5mfpdUReOlbBfemhzmB8L+yJh3c9JctX1SM53XMF8NZ/HYTMujhVwEKPZYnNpCpUZhjn/5dsKk+aifzmXSWgNsEp4ItpzFM2iFWyoF3nmF8m9fRQ691CAP/6cUtVwqDibP+PET9CEqpPflPKJ5c/QdvYrCA7Z4V4EPZ/eM19B1cFkvS270JO96tOg8Yi7tnawl7YQp6hSxjH0ZhunwohtHB+VtK3K19AeIuQso5KiSthnMirJf5hR2iqGGhv1f7DY76YDzzepQ4q6CzGItzTJq4BEJMPwFiJr8dsFHcjYaquKAjdx9Pd9yHbI+NZ72FIycW79+8REXSjESN6Ff9v0uI0xSOECuEeVc7Zyk9hHPb3sOpLWOaS3ljRW9enalZLtYZk+kpV0VDzZx4X2QoDt25K8cGPhifgAxVmhgiZy6I+iUqBrfwTvXzCOzkRLKs6VtLWwU2RDBHXTVQzV5xJQUszY5CtIFEVUnA5q9c9vFrsebZoEMwPwVSE7P2Cunqmf7CnqKfIK+KsRls5gsaPCkAA2bQGga7bEQSLvlHxKB0U0Ky2h3377KZrWKRG/wXtTDZ5buTGZqkzoYGOdJ5SL3/Ht5mQBthu9zaLTA63YLOWMLAe+tdxKBnOHYP+Mi5oSLN8uvcfG47Kk="
    file: 
      - example.pdf
    skip_cleanup: 
