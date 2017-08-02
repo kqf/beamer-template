@@ -5,9 +5,8 @@ services:
   - docker
 
 script:
-  # - docker build -t example .
-  # - docker run --rm example make
-  - echo "test" > example.pdf
+  - docker build -t example .
+  - docker run --rm example make
   - ls
 
 
@@ -21,4 +20,4 @@ deploy:
    skip_cleanup: 
      - true
    on:
-       tags: false
+       tags: true
