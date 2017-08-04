@@ -6,7 +6,7 @@ services:
 
 script:
   - docker build -t example .
-  - docker run --rm -v .:/beamer-template/example example make
+  - docker run --rm -v $(PWD):/beamer-template/example example make
   - ls
 
 
