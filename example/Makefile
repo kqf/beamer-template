@@ -3,7 +3,7 @@ source = example
 $(source).pdf: ../main-beamer-header.tex $(source).tex  drumkit.pdf
 	pdflatex $(source).tex
 	pdflatex $(source).tex
-	$(OPEN) $(source).pdf &
+	-$(OPEN) $(source).pdf &
 
 drumkit.pdf:
 	@curl -O https://openclipart.org/pdf/283153/drumkit.pdf && echo "The file was found [OK]" || echo "Can't download the file. Probably it was removed by the owner [Fail]"

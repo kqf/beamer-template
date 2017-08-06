@@ -5,9 +5,9 @@ services:
   - docker
 
 script:
-  - docker build -t example .
+  - docker build -t example --build-arg OPEN=$OPEN .
   - docker run --rm -v example:/beamer-template/example example make
-  - mv example/example.pdf .
+  - mv example/example.pdf . || echo "The output wasn't created"; ls example
   - ls
 
 
