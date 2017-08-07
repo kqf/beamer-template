@@ -9,7 +9,7 @@ Just include this header to your code.
 
 ```latex
 % slides.tex
-\input{../main-beamer-header.tex}
+\input{sbeamer.tex}
 \begin{document}
 	% < Your code >
 \end{document}

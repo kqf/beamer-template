@@ -1,6 +1,6 @@
 source = example
 
-$(source).pdf: ../main-beamer-header.tex $(source).tex  drumkit.pdf
+$(source).pdf: ../sbeamer.tex $(source).tex  drumkit.pdf
 	pdflatex $(source).tex
 	pdflatex $(source).tex
 	-$(OPEN) $(source).pdf &
