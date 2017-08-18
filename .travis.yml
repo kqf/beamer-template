@@ -6,9 +6,7 @@ services:
 
 script:
   - docker build -t example .
-  - docker run --rm -v $TRAVIS_BUILD_DIR/example:/beamer-template/example example make OPEN=ls
-  - cp example/example.pdf . || echo "The output wasn't created"; ls example
-  - ls
+  - docker run --rm -v $TRAVIS_BUILD_DIR/example:/beamer-template/example example make OPEN="du -h"
 
 deploy:
    provider:

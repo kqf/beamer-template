@@ -5,13 +5,13 @@ Single color theme and some help functions are included.
 
 
 ## Usage
-Just include this header to your code.
+Just copy `sbeamer.tex` to your project and include it in the code:
 
 ```latex
 % slides.tex
 \input{sbeamer.tex}
 \begin{document}
-	% < Your code >
+	% your code
 \end{document}
 ```
 Compile it as usual
